@@ -3,40 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mersel Prime</title>
+    <title>Mersel Prime — Твой путь к успеху</title>
 
-    <!-- Подключение Google Fonts для стильных шрифтов -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Подключение Font Awesome для иконок -->
+    <!-- Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Подключаем собственные стили -->
+    <!-- Собственные стили -->
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Header Section -->
+
+    <!-- Header -->
     <header class="header">
-        <div class="logo">Mersel Prime</div>
-        <div class="slogan">Твой путь к успеху</div>
-        <button id="theme-toggle">Переключить тему</button>
+        <div class="container">
+            <div class="logo">Mersel Prime</div>
+            <nav class="nav">
+                <a href="visa.html">Визы</a>
+                <a href="realty.html">Недвижимость</a>
+                <a href="tourism.html">Туризм</a>
+                <a href="business.html">Бизнес</a>
+                <a href="booking.html" class="btn">Бронирование</a>
+            </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>Добро пожаловать в мир роскоши</h1>
-        <button onclick="location.href='booking.html'">Бронировать</button>
+        <div class="container">
+            <h1>Твой путь к миру роскоши и возможностей</h1>
+            <p>Визовая поддержка, недвижимость, туризм, бизнес — всё для твоего успеха.</p>
+            <a href="booking.html" class="btn primary-btn">Забронировать консультацию</a>
+        </div>
     </section>
 
     <!-- Services Section -->
-    <nav class="services">
-        <a href="visa.html"><i class="fas fa-passport"></i> Визовая поддержка</a>
-        <a href="realty.html"><i class="fas fa-home"></i> Риелторские услуги</a>
-        <a href="tourism.html"><i class="fas fa-suitcase-rolling"></i> Туризм</a>
-        <a href="business.html"><i class="fas fa-briefcase"></i> Готовый бизнес</a>
-    </nav>
+    <section class="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-passport service-icon"></i>
+                    <h3>Визовая поддержка</h3>
+                    <p>Быстрое и надежное оформление виз для любых стран мира.</p>
+                    <a href="visa.html" class="btn small-btn">Подробнее</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-home service-icon"></i>
+                    <h3>Недвижимость</h3>
+                    <p>Элитная недвижимость за рубежом под ключ.</p>
+                    <a href="realty.html" class="btn small-btn">Подробнее</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-suitcase-rolling service-icon"></i>
+                    <h3>Туризм</h3>
+                    <p>Организация незабываемых путешествий в любую точку планеты.</p>
+                    <a href="tourism.html" class="btn small-btn">Подробнее</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-briefcase service-icon"></i>
+                    <h3>Готовый бизнес</h3>
+                    <p>Предложения по покупке успешных бизнесов за границей.</p>
+                    <a href="business.html" class="btn small-btn">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Подключаем JavaScript -->
+    <!-- About Us Section -->
+    <section class="about">
+        <div class="container">
+            <h2>Почему выбирают нас?</h2>
+            <div class="about-grid">
+                <div class="about-item">
+                    <h4>Опыт</h4>
+                    <p>Более 10 лет на рынке международных услуг.</p>
+                </div>
+                <div class="about-item">
+                    <h4>Надежность</h4>
+                    <p>Гарантия результата и поддержка на всех этапах.</p>
+                </div>
+                <div class="about-item">
+                    <h4>Индивидуальный подход</h4>
+                    <p>Решения, адаптированные под твои цели и задачи.</p>
+                </div>
+                <div class="about-item">
+                    <h4>Скорость</h4>
+                    <p>Минимальные сроки оформления всех услуг.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Готов начать путь к новым возможностям?</h2>
+            <a href="booking.html" class="btn primary-btn">Оставить заявку</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Mersel Prime. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Скрипты -->
     <script src="script.js"></script>
+
 </body>
 </html>
