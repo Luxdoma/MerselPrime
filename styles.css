@@ -1,240 +1,241 @@
-/* Сброс стилей */
+/* Общие стили */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Базовые стили */
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    background: #fff;
+    font-family: 'Poppins', 'Roboto', sans-serif;
     color: #333;
     line-height: 1.6;
-    transition: background 0.5s, color 0.5s;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    background-color: #fff;
 }
 
-/* Заголовки */
-h1, h2, h3 {
-    font-weight: bold;
-    margin-bottom: 20px;
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-h1 {
-    font-size: 36px;
-    color: #d4af37;
-}
-
-h2 {
-    font-size: 28px;
-}
-
-h3 {
-    font-size: 22px;
-    color: #666;
-}
-
-/* Шапка */
+/* Header */
 .header {
-    background: #fff8e1;
-    padding: 20px;
-    text-align: center;
-    transition: background 0.5s;
+    background: #f8f9fa;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-    font-size: 32px;
-    font-weight: bold;
-    color: #d4af37;
-}
-
-.slogan {
-    font-size: 18px;
-    color: #88b04b;
-}
-
-/* Hero секция */
-.hero {
-    padding: 100px 20px;
-    background: url('https://images.unsplash.com/photo-1526401281623-3a241f3b70d7') center/cover no-repeat;
-    background-attachment: fixed;
-    color: white;
-    text-align: center;
-    border-bottom: 2px solid #d4af37;
-    transition: background 0.5s;
-}
-
-.hero h1 {
-    font-size: 40px;
-}
-
-.hero p {
-    font-size: 20px;
-    margin: 20px 0 30px;
-}
-
-.hero button {
-    padding: 12px 30px;
-    font-size: 16px;
-    background: #d4af37;
-    border: none;
-    color: white;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.hero button:hover {
-    background: #b8962f;
-}
-
-/* Секции */
-.service-page, .contact-section {
-    padding: 50px 20px;
-    background: #f7f7f7;
-    text-align: center;
-}
-
-.service-page ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.service-page ul li {
-    font-size: 18px;
-    padding: 10px 0;
-}
-
-.service-page p, .contact-section p {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.service-page button, .contact-section button {
-    padding: 12px 30px;
-    font-size: 16px;
-    background: #d4af37;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.service-page button:hover, .contact-section button:hover {
-    background: #b8962f;
-}
-
-/* Категории */
-.property-categories {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 50px 20px;
-}
-
-.category {
-    flex: 1 1 30%;
-    background: #fff;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 10px;
-    transition: background 0.5s, color 0.5s;
-}
-
-.category h3 {
     font-size: 24px;
-    color: #d4af37;
-    margin-bottom: 10px;
+    font-weight: 700;
+    color: #222;
 }
 
-.category p {
-    font-size: 18px;
-    margin-bottom: 20px;
+.nav {
+    display: flex;
+    gap: 20px;
 }
 
-.category button {
-    padding: 12px 20px;
-    font-size: 16px;
-    background: #d4af37;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.category button:hover {
-    background: #b8962f;
-}
-
-/* Футер */
-.footer {
-    margin-top: auto;
-    padding: 20px;
-    background: #333;
-    color: #fff;
-    text-align: center;
-    transition: background 0.5s, color 0.5s;
-}
-
-.footer p {
-    margin-bottom: 10px;
-}
-
-.footer nav a {
-    color: #fff;
-    margin: 0 10px;
+.nav a {
     text-decoration: none;
+    color: #333;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
-.footer nav a:hover {
-    text-decoration: underline;
-    color: #d4af37;
+.nav a:hover {
+    color: #007bff;
 }
 
-/* Темная тема */
-.dark {
-    background: #121212;
-    color: #eee;
+.nav-btn {
+    background: #007bff;
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: 5px;
 }
 
-.dark .header {
-    background: #1e1e1e;
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('hero-bg.jpg') center/cover no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
 }
 
-.dark .hero {
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Services */
+.services {
+    padding: 60px 0;
+    background: #f4f4f4;
+}
+
+.services h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+}
+
+.service-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+    font-size: 40px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+/* About */
+.about {
+    padding: 60px 0;
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.about-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Call To Action */
+.cta {
+    background: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.cta h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Footer */
+.footer {
     background: #222;
+    color: #aaa;
+    padding: 20px 0;
+    text-align: center;
 }
 
-.dark .service-page, 
-.dark .contact-section {
-    background: #1a1a1a;
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.dark .category {
-    background: #2c2c2c;
-    color: #eee;
+.footer-nav {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
 }
 
-.dark .footer {
-    background: #1a1a1a;
+.footer-nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
 }
 
-/* Мобильная адаптация */
+.footer-nav a:hover {
+    color: #fff;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.primary-btn {
+    background: #007bff;
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background: #0056b3;
+}
+
+.small-btn {
+    margin-top: 10px;
+    background: #007bff;
+    color: #fff;
+    font-size: 14px;
+}
+
+.small-btn:hover {
+    background: #0056b3;
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .services-grid, .about-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
-    .property-categories {
+    .header-container {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
 
-    .category {
-        width: 80%;
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .services-grid, .about-grid {
+        grid-template-columns: 1fr;
     }
 
     .hero h1 {
@@ -244,4 +245,87 @@ h3 {
     .hero p {
         font-size: 16px;
     }
+
+    .cta h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav a {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+    }
+}
+/* Переключатель темы */
+.theme-toggle {
+    cursor: pointer;
+    font-size: 20px;
+    color: #333;
+    margin-left: 20px;
+}
+
+.theme-toggle i {
+    transition: color 0.3s;
+}
+
+.theme-toggle:hover i {
+    color: #007bff;
+}
+
+/* Темная тема */
+body.dark-mode {
+    background-color: #121212;
+    color: #eee;
+}
+
+body.dark-mode .header {
+    background: #1e1e1e;
+}
+
+body.dark-mode .nav a {
+    color: #eee;
+}
+
+body.dark-mode .nav a:hover {
+    color: #66b2ff;
+}
+
+body.dark-mode .services {
+    background: #1a1a1a;
+}
+
+body.dark-mode .service-card {
+    background: #222;
+}
+
+body.dark-mode .about {
+    background: #1a1a1a;
+}
+
+body.dark-mode .about-item {
+    background: #222;
+}
+
+body.dark-mode .cta {
+    background: #333;
+}
+
+body.dark-mode .footer {
+    background: #111;
+}
+
+body.dark-mode .primary-btn {
+    background: #66b2ff;
+}
+
+body.dark-mode .primary-btn:hover {
+    background: #3385ff;
 }
