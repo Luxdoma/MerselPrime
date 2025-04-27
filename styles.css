@@ -1,20 +1,26 @@
-/* Основные стили */
+/* Сброс стилей */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Базовые стили */
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    background: #fff;  /* Светлая тема по умолчанию */
+    background: #fff;
     color: #333;
+    line-height: 1.6;
     transition: background 0.5s, color 0.5s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Заголовки */
 h1, h2, h3 {
     font-weight: bold;
+    margin-bottom: 20px;
 }
 
 h1 {
@@ -24,7 +30,6 @@ h1 {
 
 h2 {
     font-size: 28px;
-    color: #333;
 }
 
 h3 {
@@ -32,11 +37,12 @@ h3 {
     color: #666;
 }
 
-/* Стиль для навигации */
+/* Шапка */
 .header {
     background: #fff8e1;
     padding: 20px;
     text-align: center;
+    transition: background 0.5s;
 }
 
 .logo {
@@ -50,23 +56,24 @@ h3 {
     color: #88b04b;
 }
 
-/* Секция героев */
+/* Hero секция */
 .hero {
     padding: 100px 20px;
-    background: url('https://images.unsplash.com/photo-1526401281623-3a241f3b70d7') center/cover no-repeat fixed;
+    background: url('https://images.unsplash.com/photo-1526401281623-3a241f3b70d7') center/cover no-repeat;
+    background-attachment: fixed;
     color: white;
     text-align: center;
     border-bottom: 2px solid #d4af37;
+    transition: background 0.5s;
 }
 
 .hero h1 {
     font-size: 40px;
-    margin-bottom: 10px;
 }
 
 .hero p {
     font-size: 20px;
-    margin-bottom: 30px;
+    margin: 20px 0 30px;
 }
 
 .hero button {
@@ -77,9 +84,14 @@ h3 {
     color: white;
     border-radius: 30px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-/* Стили для разделов с услугами */
+.hero button:hover {
+    background: #b8962f;
+}
+
+/* Секции */
 .service-page, .contact-section {
     padding: 50px 20px;
     background: #f7f7f7;
@@ -109,21 +121,30 @@ h3 {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s;
 }
 
-/* Категории недвижимости */
+.service-page button:hover, .contact-section button:hover {
+    background: #b8962f;
+}
+
+/* Категории */
 .property-categories {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
     padding: 50px 20px;
 }
 
 .category {
-    width: 30%;
+    flex: 1 1 30%;
     background: #fff;
     padding: 20px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: background 0.5s, color 0.5s;
 }
 
 .category h3 {
@@ -147,12 +168,18 @@ h3 {
     cursor: pointer;
 }
 
-/* Footer */
+.category button:hover {
+    background: #b8962f;
+}
+
+/* Футер */
 .footer {
+    margin-top: auto;
     padding: 20px;
     background: #333;
     color: #fff;
     text-align: center;
+    transition: background 0.5s, color 0.5s;
 }
 
 .footer p {
@@ -163,40 +190,43 @@ h3 {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer nav a:hover {
     text-decoration: underline;
+    color: #d4af37;
 }
 
-/* Стили для темной темы */
+/* Темная тема */
 .dark {
-    background: #121212; /* Темный фон для всей страницы */
-    color: #eee;  /* Текст светлый */
+    background: #121212;
+    color: #eee;
 }
 
 .dark .header {
-    background: #1e1e1e; /* Темный фон для шапки */
+    background: #1e1e1e;
 }
 
 .dark .hero {
-    background: #333; /* Темный фон для героя */
+    background: #222;
 }
 
-.dark .footer {
-    background: #222; /* Темный фон для футера */
+.dark .service-page, 
+.dark .contact-section {
+    background: #1a1a1a;
 }
 
 .dark .category {
-    background: #333; /* Темный фон для категорий */
-    color: #fff;
+    background: #2c2c2c;
+    color: #eee;
 }
 
-.dark .category h3 {
-    color: #d4af37; /* Золотой цвет для заголовков */
+.dark .footer {
+    background: #1a1a1a;
 }
 
-/* Мобильные устройства */
+/* Мобильная адаптация */
 @media (max-width: 768px) {
     .property-categories {
         flex-direction: column;
@@ -205,10 +235,13 @@ h3 {
 
     .category {
         width: 80%;
-        margin-bottom: 30px;
     }
 
     .hero h1 {
         font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
     }
 }
