@@ -1,18 +1,61 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width= device-width, initial-scale=1.0">
-<title>Бронирование</title>
-<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование</title>
+    
+    <!-- Подключаем Google Fonts для стильных шрифтов -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Подключение Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Подключаем собственные стили -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="header">
-<div class="logo">Mersel Prime</div>
-</header>
-<section class="hero">
-<h1>Форма бронирования</h1>
-<р>Свяжитесь с нами для получения лучших предложений!</p>
-</section>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">Mersel Prime</div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Форма бронирования</h1>
+        <p>Свяжитесь с нами для получения лучших предложений и эксклюзивных услуг. Мы сделаем вашу поездку незабываемой!</p>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section class="booking-form">
+        <h2>Заполните форму, и мы свяжемся с вами</h2>
+        
+        <form action="/submit_booking" method="POST">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Электронная почта</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="service">Выберите услугу</label>
+            <select id="service" name="service" required>
+                <option value="visa">Визовая поддержка</option>
+                <option value="realty">Риелторские услуги</option>
+                <option value="tourism">Туризм</option>
+                <option value="business">Готовый бизнес</option>
+            </select>
+
+            <label for="date">Дата бронирования</label>
+            <input type="date" id="date" name="date" required>
+            
+            <button type="submit">Отправить запрос</button>
+        </form>
+    </section>
+
+    <!-- Подключаем JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
