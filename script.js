@@ -4,6 +4,7 @@ const toggleBtn = document.getElementById('theme-toggle');
 if (toggleBtn) {
     const currentTheme = localStorage.getItem('theme') || 'light';
     
+    // Если в localStorage сохранена тёмная тема, активируем её
     if (currentTheme === 'dark') {
         document.body.classList.add('dark');
     }
