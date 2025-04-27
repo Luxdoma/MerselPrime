@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Helvetica Neue', sans-serif;
-    background: #fff;
+    background: #fff;  /* Светлая тема по умолчанию */
     color: #333;
     transition: background 0.5s, color 0.5s;
 }
@@ -171,29 +171,29 @@ h3 {
 
 /* Стили для темной темы */
 .dark {
-    background: #121212;
-    color: #eee;
+    background: #121212; /* Темный фон для всей страницы */
+    color: #eee;  /* Текст светлый */
 }
 
 .dark .header {
-    background: #1e1e1e;
+    background: #1e1e1e; /* Темный фон для шапки */
 }
 
 .dark .hero {
-    background: #333;
+    background: #333; /* Темный фон для героя */
 }
 
 .dark .footer {
-    background: #222;
+    background: #222; /* Темный фон для футера */
 }
 
 .dark .category {
-    background: #333;
+    background: #333; /* Темный фон для категорий */
     color: #fff;
 }
 
 .dark .category h3 {
-    color: #d4af37;
+    color: #d4af37; /* Золотой цвет для заголовков */
 }
 
 /* Мобильные устройства */
