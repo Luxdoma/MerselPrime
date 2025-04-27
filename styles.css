@@ -1,0 +1,73 @@
+body {
+margin: 0;
+font-family: 'Helvetica Neue', sans-serif;
+background: #fff;
+color: #333;
+transition: background 0.5s, color 0.5s;
+}
+.header {
+background: #fff8e1;
+padding: 20px;
+text-align: center;
+}
+logo {
+font-size: 32px;
+font-weight: bold;
+color: #d4af37;
+}
+.slogan {
+font-size: 18px;
+color: #88b04b;
+}
+#theme-toggle {
+margin-top: 10px;
+padding: 10px 20px;
+border: none;
+background: #d4af37;
+color: #fff;
+cursor: pointer;
+border-radius: 5px;
+}
+.hero {
+padding: 100px 20px;
+background: url('https://images.unspla sh.com/photo-1526401281623-3a241f3b7 0d7') center/cover no-repeat fixed;
+color: white;
+text-align: center;
+}
+.hero button {
+margin-top: 20px;
+padding: 12px 30px;
+font-size: 16px;
+background: #d4af37;
+border: none;
+color: white;
+border-radius: 30px;
+cursor: pointer;
+}
+.services {
+display: flex;
+justify-content: space-around;
+padding: 50px 20px;
+background: #f7f7f7;
+}
+.services a {
+text-decoration: none;
+font-size: 20px;
+color: #333;
+border-bottom: 2px solid transparent;
+transition: 0.3s;
+}
+.services a:hover {
+border-bottom: 2px solid #d4af37;
+}
+.dark {
+background: #121212;
+color: #eee;
+
+}
+.dark.header {
+background: #1e1e1e;
+}
+.dark.services {
+background: #1e1e1e;
+}
