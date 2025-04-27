@@ -1,19 +1,16 @@
-// Переключение темы
-const toggleBtn = document.getElementById('theme-toggle');
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
 
-// Проверка сохраненной темы из localStorage
-if (localStorage.getItem('theme') === 'dark') {
-    document.body.classList.add('dark');
-}
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
 
-toggleBtn.addEventListener('click', () => {
-    // Переключаем класс темной темы
-    document.body.classList.toggle('dark');
-
-    // Сохраняем выбранную тему в localStorage
-    if (document.body.classList.contains('dark')) {
-        localStorage.setItem('theme', 'dark');
+    // Меняем иконку (луна ↔ солнце)
+    const icon = themeToggle.querySelector('i');
+    if (body.classList.contains('dark-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
     } else {
-        localStorage.setItem('theme', 'light');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
     }
 });
