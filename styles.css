@@ -273,59 +273,15 @@ body {
 }
 
 .theme-toggle i {
-    transition: color 0.3s;
+    transition: color 0.4s, transform 0.4s;
 }
 
-.theme-toggle:hover i {
-    color: #007bff;
+/* Светлая тема — жёлтое солнце */
+body.light-mode .theme-toggle i.fa-sun {
+    color: #fdd835; /* Ярко-жёлтый */
 }
 
-/* Темная тема */
-body.dark-mode {
-    background-color: #121212;
-    color: #eee;
-}
-
-body.dark-mode .header {
-    background: #1e1e1e;
-}
-
-body.dark-mode .nav a {
-    color: #eee;
-}
-
-body.dark-mode .nav a:hover {
-    color: #66b2ff;
-}
-
-body.dark-mode .services {
-    background: #1a1a1a;
-}
-
-body.dark-mode .service-card {
-    background: #222;
-}
-
-body.dark-mode .about {
-    background: #1a1a1a;
-}
-
-body.dark-mode .about-item {
-    background: #222;
-}
-
-body.dark-mode .cta {
-    background: #333;
-}
-
-body.dark-mode .footer {
-    background: #111;
-}
-
-body.dark-mode .primary-btn {
-    background: #66b2ff;
-}
-
-body.dark-mode .primary-btn:hover {
-    background: #3385ff;
+/* Тёмная тема — чёрная луна */
+body.dark-mode .theme-toggle i.fa-moon {
+    color: #eee; /* Бело-серый */
 }
