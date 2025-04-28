@@ -4,29 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Готовый бизнес | Mersel Prime</title>
+    
+    <!-- Подключение шрифтов -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Свои стили -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Переключатель темы -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- Header -->
     <header class="header">
         <div class="logo">Mersel Prime</div>
     </header>
     
+    <!-- Hero -->
     <section class="hero">
         <h1>Готовый бизнес</h1>
         <p>Предлагаем готовые бизнес-решения под ключ. У нас вы найдете все необходимое для успешного старта бизнеса!</p>
-        <button onclick="location.href='contact.html'">Связаться с нами</button>
+        <button class="primary-btn" onclick="location.href='contact.html'">Связаться с нами</button>
     </section>
     
-    <section class="service-page">
+    <!-- Service Page -->
+    <section class="service-page container">
         <h2>Что мы предлагаем?</h2>
         <p>Мы предлагаем широкий выбор готовых бизнесов, которые обеспечат стабильный доход с первого дня. Наши предложения охватывают различные сферы, такие как: ресторанный бизнес, магазины, франшизы и другие.</p>
         <p>Каждое предложение включает в себя полный пакет услуг: консультации, помощь в запуске, поддержку и тренинг для персонала.</p>
     </section>
     
-    <section class="contact-section">
+    <!-- Contact Section -->
+    <section class="contact-section container">
         <h2>Готовы начать?</h2>
         <p>Свяжитесь с нами для подробной информации о бизнес-предложениях и консультации по выбору оптимального варианта.</p>
-        <button onclick="location.href='contact.html'">Оставить заявку</button>
+        <button class="primary-btn" onclick="location.href='contact.html'">Оставить заявку</button>
     </section>
     
     <script src="script.js"></script>
