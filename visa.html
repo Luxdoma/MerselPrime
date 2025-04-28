@@ -3,62 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Риелторские услуги | Mersel Prime</title>
+    <title>Визовая поддержка | Mersel Prime</title>
+
+    <!-- Шрифты и иконки -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun"></i>
+    </div>
+
     <header class="header">
         <div class="logo">Mersel Prime</div>
     </header>
 
     <section class="hero">
-        <h1>Риелторские услуги</h1>
-        <p>Подберем для вас лучшие объекты недвижимости, соответствующие вашим потребностям и бюджету.</p>
-        <button onclick="location.href='contact.html'">Связаться с нами</button>
+        <h1>Визовая поддержка</h1>
+        <p>Поможем вам быстро и без лишних хлопот оформить визу в любую страну мира.</p>
+        <button class="primary-btn" onclick="location.href='contact.html'">Связаться с нами</button>
     </section>
 
-    <section class="service-page">
-        <h2>Наши риелторские услуги</h2>
-        <p>Мы предоставляем полный спектр услуг на рынке недвижимости:</p>
-        <ul>
-            <li>Продажа и покупка жилья</li>
-            <li>Аренда и сдача недвижимости в аренду</li>
-            <li>Консультации по инвестициям в недвижимость</li>
-            <li>Юридическая помощь при сделках с недвижимостью</li>
-            <li>Проверка юридической чистоты объектов недвижимости</li>
+    <section class="service-page container">
+        <h2>Наши услуги по визовой поддержке</h2>
+        <p>Мы предоставляем полное сопровождение для получения визы, включая:</p>
+        <ul class="service-list">
+            <li>Консультации по подбору типа визы</li>
+            <li>Подготовка полного пакета документов</li>
+            <li>Запись на подачу документов в консульство</li>
+            <li>Организация медицинских страховок</li>
+            <li>Сопровождение на всех этапах получения визы</li>
         </ul>
     </section>
 
-    <section class="property-categories">
-        <h2>Типы недвижимости</h2>
-        <div class="category">
-            <h3>Квартиры</h3>
-            <p>Подберем вам идеальную квартиру, исходя из ваших предпочтений и бюджета.</p>
-            <button onclick="location.href='apartments.html'">Подробнее</button>
-        </div>
-        <div class="category">
-            <h3>Дома и коттеджи</h3>
-            <p>Если вы ищете дом для себя и своей семьи, у нас есть отличные предложения.</p>
-            <button onclick="location.href='houses.html'">Подробнее</button>
-        </div>
-        <div class="category">
-            <h3>Коммерческая недвижимость</h3>
-            <p>Предлагаем различные варианты коммерческих объектов для вашего бизнеса.</p>
-            <button onclick="location.href='commercial.html'">Подробнее</button>
-        </div>
-    </section>
-
-    <section class="contact-section">
-        <h2>Готовы найти идеальную недвижимость?</h2>
-        <p>Свяжитесь с нами, чтобы обсудить ваши требования и подобрать подходящий объект недвижимости.</p>
-        <button onclick="location.href='contact.html'">Оставить заявку</button>
+    <section class="contact-section container">
+        <h2>Нужна помощь в оформлении визы?</h2>
+        <p>Оставьте заявку, и наш специалист свяжется с вами для консультации.</p>
+        <button class="primary-btn" onclick="location.href='contact.html'">Оставить заявку</button>
     </section>
 
     <footer class="footer">
         <p>&copy; 2025 Mersel Prime. Все права защищены.</p>
         <nav>
             <a href="index.html">Главная</a> |
+            <a href="tourism.html">Туризм</a> |
             <a href="realty.html">Риелторские услуги</a> |
+            <a href="visa.html">Визовая поддержка</a> |
             <a href="contact.html">Контакты</a>
         </nav>
     </footer>
