@@ -46,3 +46,28 @@ window.addEventListener('scroll', () => {
     
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Для мобильных
 });
+const contactToggle = document.getElementById('contact-toggle');
+const contactLinks = document.getElementById('contact-links');
+
+contactToggle.addEventListener('click', () => {
+    contactToggle.classList.toggle('active');
+    contactLinks.classList.toggle('show');
+});
+
+// Скролл: прятать при прокрутке вниз
+let lastScrollTop = 0;
+const floatingContacts = document.querySelector('.floating-contacts');
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        floatingContacts.style.transform = 'translateY(100px)';
+        floatingContacts.style.opacity = '0';
+    } else {
+        floatingContacts.style.transform = 'translateY(0)';
+        floatingContacts.style.opacity = '1';
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+});
