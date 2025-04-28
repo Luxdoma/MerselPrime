@@ -4,50 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Готовый бизнес | Mersel Prime</title>
+
+    <!-- Шрифты и иконки -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Переключатель темы -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- Header -->
     <header class="header">
         <div class="logo">Mersel Prime</div>
     </header>
     
+    <!-- Hero -->
     <section class="hero">
         <h1>Готовый бизнес</h1>
         <p>Предлагаем готовые бизнес-решения под ключ. У нас вы найдете все необходимое для успешного старта бизнеса!</p>
-        <button onclick="location.href='contact.html'">Связаться с нами</button>
+        <button class="primary-btn" onclick="location.href='contact.html'">Связаться с нами</button>
     </section>
     
-    <section class="service-page">
+    <!-- Service Page -->
+    <section class="service-page container">
         <h2>Что мы предлагаем?</h2>
         <p>Мы предлагаем широкий выбор готовых бизнесов, которые обеспечат стабильный доход с первого дня. Наши предложения охватывают различные сферы, такие как: ресторанный бизнес, магазины, франшизы и другие.</p>
         <p>Каждое предложение включает в себя полный пакет услуг: консультации, помощь в запуске, поддержку и тренинг для персонала.</p>
     </section>
     
-    <section class="business-categories">
+    <!-- Business Categories -->
+    <section class="business-categories container">
         <h2>Популярные категории</h2>
-        <div class="category">
-            <h3>Ресторанный бизнес</h3>
-            <p>От маленьких кафе до крупных ресторанов. Мы предлагаем лучшие варианты для старта и развития в ресторанной индустрии.</p>
-            <button onclick="location.href='restaurant.html'">Подробнее</button>
-        </div>
-        <div class="category">
-            <h3>Магазины и торговля</h3>
-            <p>От магазинов одежды до продуктов питания. Наши решения охватывают все типы торговли.</p>
-            <button onclick="location.href='store.html'">Подробнее</button>
-        </div>
-        <div class="category">
-            <h3>Франшизы</h3>
-            <p>Откройте бизнес с проверенной моделью! Мы предложим вам лучшие франшизы для инвестирования.</p>
-            <button onclick="location.href='franchise.html'">Подробнее</button>
+        <div class="categories-grid">
+            <div class="category-card">
+                <h3>Ресторанный бизнес</h3>
+                <p>От маленьких кафе до крупных ресторанов. Мы предлагаем лучшие варианты для старта и развития в ресторанной индустрии.</p>
+                <button class="secondary-btn" onclick="location.href='restaurant.html'">Подробнее</button>
+            </div>
+            <div class="category-card">
+                <h3>Магазины и торговля</h3>
+                <p>От магазинов одежды до продуктов питания. Наши решения охватывают все типы торговли.</p>
+                <button class="secondary-btn" onclick="location.href='store.html'">Подробнее</button>
+            </div>
+            <div class="category-card">
+                <h3>Франшизы</h3>
+                <p>Откройте бизнес с проверенной моделью! Мы предложим вам лучшие франшизы для инвестирования.</p>
+                <button class="secondary-btn" onclick="location.href='franchise.html'">Подробнее</button>
+            </div>
         </div>
     </section>
     
-    <section class="contact-section">
+    <!-- Contact Section -->
+    <section class="contact-section container">
         <h2>Готовы начать?</h2>
         <p>Свяжитесь с нами для подробной информации о бизнес-предложениях и консультации по выбору оптимального варианта.</p>
-        <button onclick="location.href='contact.html'">Оставить заявку</button>
+        <button class="primary-btn" onclick="location.href='contact.html'">Оставить заявку</button>
     </section>
     
+    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 Mersel Prime. Все права защищены.</p>
         <nav>
@@ -56,7 +74,7 @@
             <a href="contact.html">Контакты</a>
         </nav>
     </footer>
-    
+
     <script src="script.js"></script>
 </body>
 </html>
