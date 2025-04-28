@@ -28,3 +28,21 @@ themeToggle.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
+let lastScrollTop = 0;
+const floatingContacts = document.querySelector('.floating-contacts');
+
+window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        // Скроллим вниз — прячем
+        floatingContacts.style.transform = 'translateY(100px)';
+        floatingContacts.style.opacity = '0';
+    } else {
+        // Скроллим вверх — показываем
+        floatingContacts.style.transform = 'translateY(0)';
+        floatingContacts.style.opacity = '1';
+    }
+    
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Для мобильных
+});
