@@ -338,9 +338,12 @@ body.dark-mode .booking-form button.primary-btn {
 }
 
 .hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #333;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    word-break: break-word; /* Это предотвратит некрасивое разрывание слов */
+    hyphens: auto; /* Автоматические переносы */
 }
 
 .hero p {
