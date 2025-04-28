@@ -670,3 +670,29 @@ body.dark-mode .category-card {
 .footer nav a:hover {
     text-decoration: underline;
 }
+
+.floating-contacts {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.floating-contacts a {
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.floating-contacts a:hover {
+    background-color: #f0a500;
+    color: #111;
+}
