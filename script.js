@@ -28,7 +28,7 @@ themeToggle.addEventListener('click', () => {
         localStorage.setItem('theme', 'light');
     }
 });
-// Кнопка открытия контактов
+// Открытие и закрытие контактов
 const contactToggle = document.getElementById('contact-toggle');
 const contactLinks = document.getElementById('contact-links');
 
@@ -37,7 +37,7 @@ contactToggle.addEventListener('click', () => {
     contactLinks.classList.toggle('show');
 });
 
-// Прячем контакты при скролле вниз
+// Скрываться при скролле вниз
 let lastScrollTop = 0;
 const floatingContacts = document.querySelector('.floating-contacts');
 
