@@ -751,3 +751,93 @@ body.dark-mode .category-card {
         font-size: 1rem;
     }
 }
+.floating-contacts {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.floating-contacts button {
+    background-color: #111;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.floating-contacts button:hover {
+    background-color: #f0a500;
+    color: #111;
+}
+
+#contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#contact-links a {
+    background-color: #111;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+#contact-links a:hover {
+    background-color: #f0a500;
+    color: #111;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+    .floating-contacts {
+        right: 10px;
+        bottom: 15px;
+        gap: 8px;
+    }
+
+    .floating-contacts button {
+        padding: 10px;
+        font-size: 1.4rem;
+    }
+
+    #contact-links a {
+        padding: 8px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .floating-contacts {
+        right: 8px;
+        bottom: 10px;
+        gap: 6px;
+    }
+
+    .floating-contacts button {
+        padding: 8px;
+        font-size: 1.2rem;
+    }
+
+    #contact-links a {
+        padding: 6px;
+        font-size: 1rem;
+    }
+}
