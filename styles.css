@@ -230,3 +230,100 @@ body.dark-mode .footer {
         width: 90%;
     }
 }
+/* Booking Form */
+.booking-form {
+    padding: 60px 20px;
+    background: #ffffff;
+    text-align: center;
+    border-radius: 20px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.booking-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.booking-form label {
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+}
+
+.booking-form input,
+.booking-form select {
+    padding: 12px;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.booking-form input:focus,
+.booking-form select:focus {
+    border-color: #88b04b;
+}
+
+.booking-form button.primary-btn {
+    background: #d4af37;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 30px;
+    padding: 14px 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.booking-form button.primary-btn:hover {
+    background: #c19a2b;
+}
+
+/* Адаптация формы */
+@media (max-width: 768px) {
+    .booking-form {
+        padding: 40px 15px;
+    }
+
+    .booking-form form {
+        width: 100%;
+    }
+}
+
+/* Темная тема для формы */
+body.dark-mode .booking-form {
+    background: #1e1e1e;
+    color: #eee;
+}
+
+body.dark-mode .booking-form label {
+    color: #ccc;
+}
+
+body.dark-mode .booking-form input,
+body.dark-mode .booking-form select {
+    background: #2c2c2c;
+    color: #eee;
+    border: 2px solid #d4af37;
+}
+
+body.dark-mode .booking-form input:focus,
+body.dark-mode .booking-form select:focus {
+    border-color: #88b04b;
+}
+
+body.dark-mode .booking-form button.primary-btn {
+    background: #d4af37;
+}
