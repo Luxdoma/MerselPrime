@@ -4,24 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Туризм | Mersel Prime</title>
+
+    <!-- Шрифты и иконки -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Переключатель темы -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- Header -->
     <header class="header">
         <div class="logo">Mersel Prime</div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <h1>Туризм</h1>
         <p>Организуем для вас незабываемые путешествия по всему миру. Отдыхи, которые дарят впечатления на всю жизнь.</p>
-        <button onclick="location.href='contact.html'">Связаться с нами</button>
+        <button class="primary-btn" onclick="location.href='contact.html'">Связаться с нами</button>
     </section>
 
-    <section class="service-page">
+    <!-- Service Section -->
+    <section class="service-page container">
         <h2>Наши услуги</h2>
         <p>Мы предлагаем широкий выбор туров по самым интересным и живописным направлениям. У нас вы найдете как стандартные туристические пакеты, так и индивидуальные туры с учетом ваших предпочтений.</p>
         <p>Наши услуги включают:</p>
-        <ul>
+        <ul class="service-list">
             <li>Пляжные курорты</li>
             <li>Экскурсионные туры</li>
             <li>Горные походы</li>
@@ -30,12 +43,14 @@
         </ul>
     </section>
 
-    <section class="contact-section">
+    <!-- Contact Section -->
+    <section class="contact-section container">
         <h2>Готовы отправиться в путешествие?</h2>
         <p>Свяжитесь с нами, чтобы обсудить детали вашего будущего путешествия и забронировать тур вашей мечты.</p>
-        <button onclick="location.href='contact.html'">Оставить заявку</button>
+        <button class="primary-btn" onclick="location.href='contact.html'">Оставить заявку</button>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2025 Mersel Prime. Все права защищены.</p>
         <nav>
