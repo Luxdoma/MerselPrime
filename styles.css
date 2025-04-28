@@ -327,3 +327,99 @@ body.dark-mode .booking-form select:focus {
 body.dark-mode .booking-form button.primary-btn {
     background: #d4af37;
 }
+/* Hero Section */
+.hero {
+    padding: 100px 20px 60px;
+    background: linear-gradient(135deg, #f9f9f9, #e8f5e9);
+    text-align: center;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.hero .primary-btn {
+    background: #d4af37;
+    color: #fff;
+    border: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 14px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero .primary-btn:hover {
+    background: #c19a2b;
+}
+
+/* Service Page */
+.service-page, .contact-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.service-page h2, .contact-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.service-page p, .contact-section p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Кнопка в контактной секции */
+.contact-section .primary-btn {
+    margin-top: 20px;
+}
+
+/* Адаптация */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+    .hero p, .service-page p, .contact-section p {
+        font-size: 15px;
+    }
+
+    .service-page, .contact-section {
+        padding: 40px 15px;
+    }
+}
+
+/* Темная тема */
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+}
+
+body.dark-mode .hero h1,
+body.dark-mode .service-page h2,
+body.dark-mode .contact-section h2 {
+    color: #eee;
+}
+
+body.dark-mode .hero p,
+body.dark-mode .service-page p,
+body.dark-mode .contact-section p {
+    color: #bbb;
+}
+
+body.dark-mode .primary-btn {
+    background: #d4af37;
+    color: #fff;
+}
