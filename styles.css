@@ -294,9 +294,11 @@ body.dark-mode .footer {
 }
 /* Адаптация формы */
 @media (max-width: 768px) {
-    .booking-form {
-        padding: 40px 15px;
+    .hero h1 {
+        font-size: 2rem;
+        padding: 0 20px; /* Небольшой внутренний отступ для аккуратности */
     }
+}
 
     .booking-form form {
         width: 100%;
