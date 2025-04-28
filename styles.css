@@ -856,3 +856,6 @@ body.dark-mode .category-card {
         font-size: 1rem;
     }
 }
+.floating-contacts {
+    transition: transform 0.4s, opacity 0.4s;
+}
