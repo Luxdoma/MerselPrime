@@ -5,29 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бронирование</title>
     
-    <!-- Подключаем Google Fonts для стильных шрифтов -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Подключение Font Awesome для иконок -->
+    <!-- Font Awesome для иконок -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Подключаем собственные стили -->
+    <!-- Свои стили -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Переключатель темы -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun"></i>
+    </div>
+
+    <!-- Header -->
     <header class="header">
         <div class="logo">Mersel Prime</div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero -->
     <section class="hero">
         <h1>Форма бронирования</h1>
         <p>Свяжитесь с нами для получения лучших предложений и эксклюзивных услуг. Мы сделаем вашу поездку незабываемой!</p>
     </section>
 
-    <!-- Booking Form Section -->
-    <section class="booking-form">
+    <!-- Booking Form -->
+    <section class="booking-form container">
         <h2>Заполните форму, и мы свяжемся с вами</h2>
         
         <form action="/submit_booking" method="POST">
@@ -51,11 +56,11 @@
             <label for="date">Дата бронирования</label>
             <input type="date" id="date" name="date" required>
             
-            <button type="submit">Отправить запрос</button>
+            <button type="submit" class="primary-btn">Отправить запрос</button>
         </form>
     </section>
 
-    <!-- Подключаем JavaScript -->
+    <!-- Подключение скрипта -->
     <script src="script.js"></script>
 </body>
 </html>
