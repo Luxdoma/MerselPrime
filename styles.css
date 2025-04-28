@@ -275,22 +275,23 @@ body.dark-mode .footer {
     border-color: #88b04b;
 }
 
-.booking-form button.primary-btn {
-    background: #d4af37;
-    color: #fff;
-    border: none;
+.booking from button.primary-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 1.2rem; /* Сделать текст кнопки больше */
     font-weight: 600;
-    font-size: 18px;
-    border-radius: 30px;
-    padding: 14px 30px;
-    cursor: pointer;
-    transition: background 0.3s;
+    color: #fff;
+    background-color: #1a1a1a; /* Элегантный тёмный цвет */
+    border: none;
+    border-radius: 50px; /* Скругленные углы */
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.booking-form button.primary-btn:hover {
-    background: #c19a2b;
+.booking from button.primary-btn:hover {
+    background-color: #333;
+    transform: translateY(-3px); /* Лёгкий подъём при наведении */
 }
-
 /* Адаптация формы */
 @media (max-width: 768px) {
     .booking-form {
