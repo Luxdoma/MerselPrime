@@ -516,3 +516,30 @@ body.dark-mode .footer {
 body.dark-mode .footer a {
     color: #bbb;
 }
+/* Списки услуг */
+.service-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.service-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 30px;
+    position: relative;
+    color: #555;
+}
+
+.service-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #d4af37;
+    font-size: 20px;
+}
+
+/* Темная тема для списка */
+body.dark-mode .service-list li {
+    color: #bbb;
+}
