@@ -670,17 +670,16 @@ body.dark-mode .category-card {
 .footer nav a:hover {
     text-decoration: underline;
 }
-/* Плавающие контакты */
+        /* Плавающие контакты */
 .floating-contacts {
     position: fixed;
-    left: 20px;
-    bottom: 10px; /* Сделал ещё ниже */
+    left: 20px;  /* Позиция слева */
+    bottom: 10px; /* Позиция снизу */
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
     z-index: 1000;
-    transition: transform 0.4s, opacity 0.4s;
 }
 
 /* Кнопка "плюс" */
@@ -688,10 +687,10 @@ body.dark-mode .category-card {
     background-color: #111;
     color: #fff;
     border: none;
-    width: 60px;   /* Сделал побольше */
-    height: 60px;  /* Сделал побольше */
+    width: 60px;   /* Размер кнопки */
+    height: 60px;  /* Размер кнопки */
     border-radius: 50%; /* Абсолютный круг */
-    font-size: 2rem; /* Сделал плюс больше */
+    font-size: 2rem; /* Размер плюса */
     cursor: pointer;
     transition: background 0.3s, transform 0.4s;
 }
@@ -744,6 +743,34 @@ body.dark-mode .category-card {
     color: #111;
 }
 
+/* Анимация появления контактов по очереди */
+#contact-links.show a {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.4s forwards;
+}
+
+/* Задержка для каждой иконки */
+#contact-links.show a:nth-child(1) {
+    animation-delay: 0.1s;
+}
+#contact-links.show a:nth-child(2) {
+    animation-delay: 0.2s;
+}
+#contact-links.show a:nth-child(3) {
+    animation-delay: 0.3s;
+}
+#contact-links.show a:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Адаптив для телефонов */
 @media (max-width: 600px) {
     .floating-contacts {
@@ -782,32 +809,5 @@ body.dark-mode .category-card {
         width: 35px;
         height: 35px;
         font-size: 1.2rem;
-    }
-}
-/* Анимация появления контактов по очереди */
-#contact-links.show a {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: slideUp 0.4s forwards;
-}
-
-/* Задержка для каждой иконки */
-#contact-links.show a:nth-child(1) {
-    animation-delay: 0.1s;
-}
-#contact-links.show a:nth-child(2) {
-    animation-delay: 0.2s;
-}
-#contact-links.show a:nth-child(3) {
-    animation-delay: 0.3s;
-}
-#contact-links.show a:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-@keyframes slideUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }
