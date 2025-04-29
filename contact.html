@@ -1,63 +1,115 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Связаться с нами</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      padding: 40px;
-      background: #f5f5f5;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Связаться с нами | Mersel Prime</title>
+    
+    <!-- Подключение шрифтов -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Свои стили -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8f4; /* Молочно-зелёный фон */
+            padding: 40px;
+            margin: 0;
+        }
 
-    .form-container {
-      max-width: 500px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
 
-    input, textarea, button {
-      width: 100%;
-      margin-top: 10px;
-      padding: 14px;
-      font-size: 16px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+        }
 
-    button {
-      background-color: black;
-      color: white;
-      border: none;
-      margin-top: 20px;
-      cursor: pointer;
-    }
+        .primary-btn {
+            background-color: #8abf91; /* Молочно-зелёный оттенок для кнопок */
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
 
-    button:hover {
-      background-color: #333;
-    }
-  </style>
+        .primary-btn:hover {
+            background-color: #7a9e7d; /* Тёмно-зелёный оттенок при наведении */
+        }
+
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            margin-top: 10px;
+            padding: 14px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #8abf91; /* Кнопка с молочно-зелёным оттенком */
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #7a9e7d;
+        }
+    </style>
 </head>
 <body>
 
-  <div class="form-container">
-    <h2>Связаться с нами</h2>
-    <form action="https://formsubmit.co/haltravelk@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Ваше имя" required>
-      <input type="email" name="email" placeholder="Ваш email" required>
-      <textarea name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Mersel Premium</div>
+    </header>
+    
+    <!-- Контактная форма -->
+    <div class="form-container">
+        <h2>Связаться с нами</h2>
+        <form action="https://formsubmit.co/haltravelk@gmail.com" method="POST">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="email" name="email" placeholder="Ваш email" required>
+            <textarea name="message" placeholder="Ваше сообщение" rows="5" required></textarea>
 
-      <input type="hidden" name="_subject" value="Новое сообщение с сайта Mersel Prime">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="thanks.html"> <!-- теперь ведёт на локальную страницу -->
+            <input type="hidden" name="_subject" value="Новое сообщение с сайта Mersel Prime">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="thanks.html"> <!-- Страница благодарности -->
 
-      <button type="submit">Отправить</button>
-    </form>
-  </div>
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
 
 </body>
 </html>
