@@ -72,14 +72,18 @@ body {
     color: #88b04b;
 }
 
-/* Hero */
+/* Hero (Объединённая версия) */
 .hero {
-    background: url('https://images.unsplash.com/photo-1526401281623-3a241f3b70d7') center/cover no-repeat;
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+        url('https://images.unsplash.com/photo-1526401281623-3a241f3b70d7') center/cover no-repeat;
     text-align: center;
-    padding: 120px 20px;
+    padding: 120px 20px 80px;
     color: white;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
-
 .hero h1 {
     font-size: 40px;
     margin-bottom: 15px;
@@ -275,7 +279,7 @@ body.dark-mode .footer {
     border-color: #88b04b;
 }
 
-.booking from button.primary-btn {
+.booking-form button.primary-btn {
     display: inline-block;
     padding: 16px 32px;
     font-size: 1.2rem; /* Сделать текст кнопки больше */
@@ -288,7 +292,7 @@ body.dark-mode .footer {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.booking from button.primary-btn:hover {
+.booking-form button.primary-btn:hover {
     background-color: #333;
     transform: translateY(-3px); /* Лёгкий подъём при наведении */
 }
@@ -303,7 +307,6 @@ body.dark-mode .footer {
     .booking-form form {
         width: 100%;
     }
-}
 
 /* Темная тема для формы */
 body.dark-mode .booking-form {
