@@ -6,6 +6,18 @@
   <title>Связаться | Mersel Premium</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
+    :root {
+      --bg-light: #fdfefc;
+      --primary-light: #e0f2ea;
+      --accent-light: #0e3b2f;
+
+      --bg-dark: #0c0c0c;
+      --primary-dark: #1b1b1b;
+      --accent-dark: #d4af37;
+
+      --transition: all 0.3s ease;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -14,7 +26,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: #f6f6f4;
+      background: var(--bg-light);
       color: #111;
       line-height: 1.6;
       padding: 40px 20px;
@@ -22,28 +34,48 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      transition: var(--transition);
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: #eee;
     }
 
     .container {
       max-width: 480px;
       width: 100%;
-      background: #ffffff;
+      background: #fff;
       border-radius: 24px;
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
       padding: 40px;
-      animation: fadeIn 0.8s ease forwards;
+      transition: var(--transition);
+    }
+
+    body.dark .container {
+      background: var(--primary-dark);
+      box-shadow: 0 20px 60px rgba(212, 175, 55, 0.1);
     }
 
     h1 {
       font-size: 28px;
       font-weight: 600;
       margin-bottom: 20px;
-      color: #0e3b2f;
+      color: var(--accent-light);
+      transition: var(--transition);
+    }
+
+    body.dark h1 {
+      color: var(--accent-dark);
     }
 
     p {
       margin-bottom: 30px;
-      color: #333;
+      color: #444;
+    }
+
+    body.dark p {
+      color: #bbb;
     }
 
     form {
@@ -54,7 +86,6 @@
     label {
       font-weight: 500;
       margin-bottom: 6px;
-      color: #222;
     }
 
     input,
@@ -65,41 +96,48 @@
       border-radius: 12px;
       font-size: 16px;
       background: #fafafa;
-      transition: all 0.3s ease;
+      transition: var(--transition);
+    }
+
+    body.dark input,
+    body.dark textarea {
+      background: #111;
+      border: 1px solid #555;
+      color: #eee;
     }
 
     input:focus,
     textarea:focus {
-      border-color: #0e3b2f;
+      border-color: var(--accent-light);
       outline: none;
       background: #fff;
     }
 
+    body.dark input:focus,
+    body.dark textarea:focus {
+      border-color: var(--accent-dark);
+      background: #1c1c1c;
+    }
+
     button {
       padding: 14px;
-      background-color: #0e3b2f;
+      background-color: var(--accent-light);
       color: white;
       border: none;
       border-radius: 12px;
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
-      transition: background 0.3s ease;
+      transition: var(--transition);
+    }
+
+    body.dark button {
+      background-color: var(--accent-dark);
+      color: #000;
     }
 
     button:hover {
-      background-color: #0c2e25;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      opacity: 0.9;
     }
 
     @media (max-width: 500px) {
@@ -113,7 +151,7 @@
     }
   </style>
 </head>
-<body>
+<body class="light">
   <div class="container">
     <h1>Связаться с нами</h1>
     <p>Если у вас есть вопросы, предложения или вы хотите сотрудничать — напишите нам.</p>
@@ -130,5 +168,13 @@
       <button type="submit">Отправить</button>
     </form>
   </div>
+
+  <!-- Скрипт для переключения тем -->
+  <script>
+    // Автопереключение по системной теме (можно убрать)
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('dark');
+    }
+  </script>
 </body>
 </html>
