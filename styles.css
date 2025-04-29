@@ -429,6 +429,13 @@ body.dark-mode .primary-btn {
     background: #d4af37;
     color: #fff;
 }
+/* Фиксация иконки луны */
+.moon-icon {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
+}
 /* Categories Section */
 .business-categories {
     padding: 60px 20px;
@@ -699,6 +706,13 @@ body.dark-mode .category-card {
     background-color: #f0a500;
     color: #111;
 }
+/* Перемещение плюсика вниз влево */
+.plus-button {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+}
 
 /* Анимация при активации */
 .floating-contacts button.active {
@@ -864,3 +878,4 @@ body.dark-mode .category-card {
 .contact-link:hover {
   background-color: #555;
 }
+
