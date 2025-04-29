@@ -710,3 +710,114 @@ body.dark-mode .category-card {
     font-size: 12px;
     color: #777;
 }
+/* Общие стили для контактной страницы */
+.contact-page {
+    background: linear-gradient(to right, #e8f5e9, #f0f4f1); /* Молочно-зеленый фон */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Заголовок на странице */
+.contact-page h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Описание страницы */
+.contact-page p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #555;
+}
+
+/* Форма */
+.contact-form {
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+/* Поля формы */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #88b04b; /* Зелёный акцент */
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+/* Поля формы при фокусе */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d4af37; /* Золотой акцент */
+}
+
+/* Кнопка отправки */
+.contact-form button.primary-btn {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #88b04b; /* Зеленый */
+    border: none;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Эффект наведения на кнопку */
+.contact-form button.primary-btn:hover {
+    background-color: #6a8e3a; /* Темнее зелёный */
+    transform: translateY(-3px);
+}
+
+/* Адаптация */
+@media (max-width: 768px) {
+    .contact-page h2 {
+        font-size: 28px;
+    }
+
+    .contact-page p {
+        font-size: 15px;
+    }
+
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Темная тема */
+body.dark-mode .contact-page {
+    background: linear-gradient(to right, #2c2c2c, #1e1e1e); /* Темный градиент для темной темы */
+}
+
+body.dark-mode .contact-page h2,
+body.dark-mode .contact-page p {
+    color: #eee;
+}
+
+body.dark-mode .contact-form {
+    background: #333;
+    color: #eee;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background: #2c2c2c;
+    color: #eee;
+    border: 2px solid #88b04b;
+}
+
+body.dark-mode .contact-form button.primary-btn {
+    background-color: #d4af37; /* Золотой в темной теме */
+}
