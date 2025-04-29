@@ -30,34 +30,3 @@ if (themeToggle) {
         applyTheme(isDark ? 'light' : 'dark');
     });
 }
-
-// === Контакты ===
-const contactToggle = document.getElementById('contact-toggle');
-const contactLinks = document.getElementById('contact-links');
-
-if (contactToggle && contactLinks) {
-    contactToggle.addEventListener('click', () => {
-        contactToggle.classList.toggle('active');
-        contactLinks.classList.toggle('show');
-    });
-}
-
-// === Плавающие контакты при скролле ===
-let lastScrollTop = 0;
-const floatingContacts = document.querySelector('.floating-contacts');
-
-if (floatingContacts) {
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        if (scrollTop > lastScrollTop) {
-            floatingContacts.style.transform = 'translateY(100px)';
-            floatingContacts.style.opacity = '0';
-        } else {
-            floatingContacts.style.transform = 'translateY(0)';
-            floatingContacts.style.opacity = '1';
-        }
-
-        lastScrollTop = Math.max(scrollTop, 0);
-    });
-}
