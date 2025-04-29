@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Бронирование</title>
-    
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
@@ -13,6 +12,7 @@
 
     <!-- Свои стили -->
     <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
     <!-- Переключатель темы -->
@@ -35,7 +35,13 @@
     <section class="booking-form container">
         <h2>Заполните форму, и мы свяжемся с вами</h2>
         
-        <form action="/submit_booking" method="POST">
+        <form action="https://formsubmit.co/haltravelk@gmail.com" method="POST">
+            <!-- Скрытое поле для подтверждения -->
+            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+            
+            <!-- Скрытое поле для темы письма -->
+            <input type="hidden" name="_subject" value="Новый запрос на бронирование">
+            
             <label for="name">Ваше имя</label>
             <input type="text" id="name" name="name" required>
             
@@ -62,5 +68,6 @@
 
     <!-- Подключение скрипта -->
     <script src="script.js"></script>
+
 </body>
 </html>
