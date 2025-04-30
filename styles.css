@@ -822,6 +822,8 @@ body.dark-mode .contact-form button.primary-btn {
     background-color: #d4af37; /* Золотой в темной теме */
 }
 
+background-image: url('image/mainhomepage.jpg');
+
 .hero {
     background-image: url('image/mainhomepage.jpg');
     background-size: cover;
