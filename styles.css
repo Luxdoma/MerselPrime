@@ -852,3 +852,16 @@ body.dark-mode .contact-form button.primary-btn {
   width: auto;
   display: block;
 }
+.logo-img {
+  max-width: 150px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    max-width: 100px;
+  }
+}
