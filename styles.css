@@ -73,7 +73,7 @@ body {
 }
 
 /* Hero (Объединённая версия) */
-.hero {
+.hero-main {
     background: 
         linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
         url('https://images.unsplash.com/photo-1526401281623-3a241f3b70d7') center/cover no-repeat;
@@ -334,7 +334,7 @@ body.dark-mode .booking-form button.primary-btn {
     background: #d4af37;
 }
 /* Hero Section */
-.hero {
+.hero-light {
     padding: 100px 20px 60px;
     background: linear-gradient(135deg, #f9f9f9, #e8f5e9);
     text-align: center;
@@ -586,7 +586,7 @@ body.dark-mode .category-card {
     color: #ddd;
 }
 /* Секция hero для визовой поддержки */
-.hero {
+.hero-visa {
     background: linear-gradient(rgba(0, 123, 255, 0.7), rgba(0, 123, 255, 0.7)), url('visa-background.jpg') no-repeat center center/cover;
     padding: 100px 20px;
     text-align: center;
