@@ -847,3 +847,8 @@ body.dark-mode .contact-form button.primary-btn {
     width: 100%;
     padding: 20px;
 }
+.logo-img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
