@@ -821,3 +821,50 @@ body.dark-mode .contact-form textarea {
 body.dark-mode .contact-form button.primary-btn {
     background-color: #d4af37; /* Золотой в темной теме */
 }
+
+.hero {
+    background-image: url('images/mainhomepage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* затемнение для читаемости текста */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: white;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
