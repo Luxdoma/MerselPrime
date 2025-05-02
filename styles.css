@@ -822,10 +822,10 @@ body.dark-mode .contact-form button.primary-btn {
     background-color: #d4af37; /* Золотой в темной теме */
 }
 
-background-image: url('image/mainhomepage.jpg');
+background-image: url('images/mainpage.jpg');
 
 .hero {
-    background-image: url('image/mainhomepage.jpg');
+    background-image: url('images/mainpage.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
