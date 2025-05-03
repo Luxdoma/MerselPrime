@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="images/logo1.jpg" alt="Mersel Premium Logo" width="200"/>
+</p>
 # Mersel Premium
 
 ## Описание
