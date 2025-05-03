@@ -37,4 +37,6 @@ cd mersel-premium
 npm install
 npm run dev
 <p align="center">
-  
+git add images/logo1.jpg
+git commit -m "Добавлен логотип"
+git push
