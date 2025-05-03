@@ -27,7 +27,7 @@
 - Блог с советами и аналитикой
 
 logo
-<img src="public/images/logo1.img" alt="Mersel Premium Logo" width="200"/>
+<img src="images/logo1.img" alt="Mersel Premium Logo" width="200"/>
 </p>
 
 ## Установка (для разработчиков)
