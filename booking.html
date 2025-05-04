@@ -35,37 +35,34 @@
     <section class="booking-form container">
         <h2>Заполните форму, и мы свяжемся с вами</h2>
         
-        <form action="https://formsubmit.co/haltravelk@gmail.com" method="POST">
-            <!-- Скрытое поле для подтверждения -->
-            <input type="hidden" name="_next" value="https://luxdoma.github.io/MerselPrime/booking.html/thank-you.html">
- <!-- отключаем captcha -->
-  <input type="hidden" name="_captcha" value="false">
-            
-            <!-- Скрытое поле для темы письма -->
-            <input type="hidden" name="_subject" value="Новый запрос на бронирование">
-            
-            <label for="name">Ваше имя</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Электронная почта</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="phone">Телефон</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="service">Выберите услугу</label>
-            <select id="service" name="service" required>
-                <option value="visa">Визовая поддержка</option>
-                <option value="realty">Риелторские услуги</option>
-                <option value="tourism">Туризм</option>
-                <option value="business">Готовый бизнес</option>
-            </select>
+        <form id="booking-form">
+  <label for="name">Ваше имя</label>
+  <input type="text" id="name" name="name" required>
 
-            <label for="date">Дата бронирования</label>
-            <input type="date" id="date" name="date" required>
-            
-            <button type="submit" class="primary-btn">Отправить запрос</button>
-        </form>
+  <label for="email">Электронная почта</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="phone">Телефон</label>
+  <input type="tel" id="phone" name="phone" required>
+
+  <label for="service">Выберите услугу</label>
+  <select id="service" name="service" required>
+    <option value="visa">Визовая поддержка</option>
+    <option value="realty">Риелторские услуги</option>
+    <option value="tourism">Туризм</option>
+    <option value="business">Готовый бизнес</option>
+  </select>
+
+  <label for="date">Дата бронирования</label>
+  <input type="date" id="date" name="date" required>
+
+  <button type="submit" class="primary-btn">Отправить запрос</button>
+</form>
+
+<!-- Сообщение после отправки -->
+<div id="form-message" style="display: none;">
+  Спасибо! Мы скоро с вами свяжемся.
+</div>
     </section>
 
     <!-- Подключение скрипта -->
