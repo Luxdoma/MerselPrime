@@ -30,3 +30,30 @@ if (themeToggle) {
         applyTheme(isDark ? 'light' : 'dark');
     });
 }
+
+const form = document.getElementById("booking-form");
+const message = document.getElementById("form-message");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  formData.append("_subject", "Новый запрос на бронирование");
+  formData.append("_captcha", "false");
+
+  try {
+    const response = await fetch("https://formsubmit.co/haltravelk@gmail.com", {
+      method: "POST",
+      body: formData
+    });
+
+    if (response.ok) {
+      form.style.display = "none";           // Скрываем форму
+      message.style.display = "block";       // Показываем сообщение
+    } else {
+      alert("Ошибка при отправке. Попробуйте позже.");
+    }
+  } catch (error) {
+    alert("Ошибка соединения. Проверьте интернет и попробуйте снова.");
+  }
+});
