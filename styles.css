@@ -867,3 +867,25 @@ background-image: url('images/mainpage.jpg');
     max-width: 100px;
   }
 }
+
+/* Для больших экранов (например, на компьютере) */
+body {
+  background-color: lightblue;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Для маленьких экранов (например, на телефоне) */
+@media (max-width: 600px) {
+  body {
+    background-color: lightgreen;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
