@@ -1,142 +1,425 @@
 /* ========== Общие стили ========== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-{ margin: 0; padding: 0; box-sizing: border-box; }
-
-
-body { font-family: 'Poppins', 'Roboto', sans-serif; background: #ffffff; color: #333; transition: background 0.4s, color 0.4s; }
-
-.container { width: 90%; max-width: 1200px; margin: 0 auto; }
-
-/* ========== Переключатель темы ========== */ .theme-toggle, .moon-icon { position: fixed; top: 20px; right: 20px; background: none; border: none; cursor: pointer; font-size: 24px; z-index: 1000; }
-
-.theme-toggle i { transition: color 0.4s, transform 0.4s; }
-
-/* ========== Хедер и навигация ========== */ .header { background: #fff; padding: 20px 0; text-align: center; position: relative; }
-
-.logo { font-size: 32px; color: #d4af37; font-weight: 700; }
-.logo img {
-  max-width: 100%;
-  height: auto;
+body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  background: #ffffff;
+  color: #333;
+  transition: background 0.4s, color 0.4s;
 }
 
-.nav { margin-top: 15px; }
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-.nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: #333; transition: color 0.3s; }
+/* ========== Переключатель темы ========== */
+.theme-toggle, .moon-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1000;
+}
 
-.nav a.btn { background: #d4af37; color: white; padding: 10px 20px; border-radius: 30px; }
+.theme-toggle i {
+  transition: color 0.4s, transform 0.4s;
+}
 
-.nav a:hover { color: #88b04b; }
+/* ========== Хедер и навигация ========== */
+.header {
+  background: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
 
-/* ========== Hero ========== */ .hero, .hero-light, .hero-visa { text-align: center; padding: 100px 20px 60px; border-radius: 20px; margin: 20px; color: white; }
+.logo {
+  font-size: 24px; /* Уменьшено с 32px */
+  color: #d4af37;
+  font-weight: 700;
+}
 
-.hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1526401281623-3a241f3b70d7') center/cover no-repeat; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+.nav {
+  margin-top: 15px;
+}
 
-.hero-light { background: linear-gradient(135deg, #f9f9f9, #e8f5e9); color: #555; }
+.nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s;
+}
 
-.hero-visa { background: linear-gradient(rgba(0,123,255,0.7), rgba(0,123,255,0.7)), url('visa-background.jpg') center/cover no-repeat; }
+.nav a.btn {
+  background: #d4af37;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
 
-.hero h1 { font-size: 2.5rem; font-weight: 700; word-break: break-word; hyphens: auto; margin-bottom: 20px; }
+.nav a:hover {
+  color: #88b04b;
+}
 
-.hero p { font-size: 18px; margin-bottom: 30px; max-width: 600px; margin-left: auto; margin-right: auto; }
+/* ========== Hero ========== */
+.hero, .hero-light, .hero-visa {
+  text-align: center;
+  padding: 100px 20px 60px;
+  border-radius: 20px;
+  margin: 20px;
+  color: white;
+}
 
-.primary-btn { background: #d4af37; color: #fff; padding: 14px 30px; font-size: 18px; border: none; border-radius: 30px; cursor: pointer; transition: background 0.3s; }
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+              url('https://images.unsplash.com/photo-1526401281623-3a241f3b70d7') center/cover no-repeat;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
 
-.primary-btn:hover { background: #c19a2b; }
+.hero-light {
+  background: linear-gradient(135deg, #f9f9f9, #e8f5e9);
+  color: #555;
+}
 
-/* ========== Services & About ========== */ .services, .about { padding: 60px 20px; text-align: center; }
+.hero-visa {
+  background: linear-gradient(rgba(0,123,255,0.7), rgba(0,123,255,0.7)),
+              url('visa-background.jpg') center/cover no-repeat;
+}
 
-.services { background: #f9f9f9; }
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  word-break: break-word;
+  hyphens: auto;
+  margin-bottom: 20px;
+}
 
-.services-grid, .about-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 40px; }
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-.service-card, .about-item { background: #fff; padding: 20px; border-radius: 15px; width: 250px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); transition: transform 0.3s; }
+.primary-btn {
+  background: #d4af37;
+  color: #fff;
+  padding: 14px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: inline-block;
+  margin: 0 auto;
+}
 
-.service-card:hover { transform: translateY(-5px); }
+.primary-btn:hover {
+  background: #c19a2b;
+}
 
-.service-icon { font-size: 40px; color: #d4af37; margin-bottom: 15px; }
+/* ========== Services & About ========== */
+.services, .about {
+  padding: 60px 20px;
+  text-align: center;
+}
 
-/* ========== CTA ========== */ .cta { background: #88b04b; color: white; text-align: center; padding: 80px 20px; }
+.services {
+  background: #f9f9f9;
+}
 
-.cta h2 { font-size: 32px; margin-bottom: 20px; }
+.services-grid, .about-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
 
-/* ========== Footer ========== */ .footer { padding: 30px 20px; text-align: center; font-size: 14px; color: #777; border-top: 1px solid #e0e0e0; margin-top: 40px; }
+.service-card, .about-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
 
-.footer nav { margin-top: 10px; }
+.service-card:hover {
+  transform: translateY(-5px);
+}
 
-.footer a { color: #777; text-decoration: none; margin: 0 5px; }
+.service-icon {
+  font-size: 40px;
+  color: #d4af37;
+  margin-bottom: 15px;
+}
 
-.footer a:hover { color: #d4af37; }
+/* ========== CTA ========== */
+.cta {
+  background: #88b04b;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
 
-/* ========== Booking Form ========== */ .booking-form { padding: 60px 20px; background: #ffffff; text-align: center; border-radius: 20px; margin: 40px auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+.cta h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
 
-.booking-form h2 { font-size: 28px; margin-bottom: 20px; color: #333; }
+.cta .primary-btn {
+  margin-top: 20px;
+  display: inline-block;
+}
 
-.booking-form form { display: flex; flex-direction: column; gap: 20px; max-width: 500px; margin: 0 auto; width: 100%; }
+/* ========== Footer ========== */
+.footer {
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 
-.booking-form label { text-align: left; font-weight: 600; color: #555; }
+.footer nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-.booking-form input, .booking-form select { padding: 12px; border: 2px solid #d4af37; border-radius: 10px; font-size: 16px; outline: none; transition: border-color 0.3s; }
+.footer a {
+  color: #777;
+  text-decoration: none;
+  margin: 0 5px;
+}
 
-.booking-form input:focus, .booking-form select:focus { border-color: #88b04b; }
+.footer a:hover {
+  color: #d4af37;
+}
 
-.booking-form button.primary-btn { background-color: #1a1a1a; font-weight: 600; font-size: 1.2rem; padding: 16px 32px; border-radius: 50px; }
+/* ========== Booking Form ========== */
+.booking-form {
+  padding: 60px 20px;
+  background: #ffffff;
+  text-align: center;
+  border-radius: 20px;
+  margin: 40px auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
 
-.booking-form button.primary-btn:hover { background-color: #333; transform: translateY(-3px); }
+.booking-form h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
 
-/* ========== Categories Section ========== */ .business-categories { padding: 60px 20px; text-align: center; }
+.booking-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
 
-.categories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 30px; }
+.booking-form label {
+  text-align: left;
+  font-weight: 600;
+  color: #555;
+}
 
-.category-card { background: #ffffff; border-radius: 20px; padding: 30px 20px; box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05); transition: transform 0.3s, box-shadow 0.3s; }
+.booking-form input, .booking-form select {
+  padding: 12px;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
 
-.category-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); }
+.booking-form input:focus, .booking-form select:focus {
+  border-color: #88b04b;
+}
 
-.category-card h3 { font-size: 22px; margin-bottom: 15px; color: #333; }
+.booking-form button.primary-btn {
+  background-color: #1a1a1a;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 16px 32px;
+  border-radius: 50px;
+  align-self: center;
+}
 
-.category-card p { font-size: 16px; margin-bottom: 20px; color: #555; }
+.booking-form button.primary-btn:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+}
 
-.secondary-btn { background: transparent; border: 2px solid #d4af37; color: #d4af37; font-weight: 600; font-size: 16px; padding: 10px 20px; border-radius: 30px; cursor: pointer; transition: all 0.3s; }
+/* ========== Categories Section ========== */
+.business-categories {
+  padding: 60px 20px;
+  text-align: center;
+}
 
-.secondary-btn:hover { background: #d4af37; color: #fff; }
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
 
-/* ========== Списки услуг ========== */ .service-list { list-style: none; padding: 0; margin: 20px 0; }
+.category-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
 
-.service-list li { font-size: 16px; margin-bottom: 10px; padding-left: 30px; position: relative; color: #555; }
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
 
-.service-list li::before { content: "•"; position: absolute; left: 0; color: #d4af37; font-size: 20px; }
+.category-card h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #333;
+}
 
-/* ========== Темная тема ========== */ body.dark-mode { background: #121212; color: #eee; }
+.category-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555;
+}
 
-body.dark-mode .header, body.dark-mode .services, body.dark-mode .booking-form, body.dark-mode .category-card, body.dark-mode .footer { background: #1e1e1e; color: #bbb; }
+.secondary-btn {
+  background: transparent;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
 
-body.dark-mode .nav a, body.dark-mode .booking-form label, body.dark-mode .service-list li, body.dark-mode .footer a { color: #ccc; }
+.secondary-btn:hover {
+  background: #d4af37;
+  color: #fff;
+}
 
-body.dark-mode .hero, body.dark-mode .hero-light, body.dark-mode .hero-visa { background: linear-gradient(135deg, #1e1e1e, #2c2c2c); color: #eee; }
+/* ========== Списки услуг ========== */
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
 
-body.dark-mode .primary-btn, body.dark-mode .nav a.btn, body.dark-mode .booking-form button.primary-btn { background: #d4af37; color: #fff; }
+.service-list li {
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  position: relative;
+  color: #555;
+}
 
-body.dark-mode .booking-form input, body.dark-mode .booking-form select { background: #2c2c2c; color: #eee; border-color: #d4af37; }
+.service-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #d4af37;
+  font-size: 20px;
+}
 
-body.dark-mode .footer { border-color: #444; }
+/* ========== Темная тема ========== */
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
 
-/* ========== Медиа-запросы ========== */ @media (max-width: 768px) { .hero h1 { font-size: 2rem; padding: 0 20px; }
+body.dark-mode .header,
+body.dark-mode .services,
+body.dark-mode .booking-form,
+body.dark-mode .category-card,
+body.dark-mode .footer {
+  background: #1e1e1e;
+  color: #bbb;
+}
 
-.hero p, .service-page p, .contact-section p { font-size: 15px; }
+body.dark-mode .nav a,
+body.dark-mode .booking-form label,
+body.dark-mode .service-list li,
+body.dark-mode .footer a {
+  color: #ccc;
+}
 
-.services-grid, .about-grid { flex-direction: column; align-items: center; }
+body.dark-mode .hero,
+body.dark-mode .hero-light,
+body.dark-mode .hero-visa {
+  background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
+  color: #eee;
+}
 
-.service-card, .about-item { width: 90%; }
+body.dark-mode .primary-btn,
+body.dark-mode .nav a.btn,
+body.dark-mode .booking-form button.primary-btn {
+  background: #d4af37;
+  color: #fff;
+}
 
-.service-page, .contact-section { padding: 40px 15px; } }
+body.dark-mode .booking-form input,
+body.dark-mode .booking-form select {
+  background: #2c2c2c;
+  color: #eee;
+  border-color: #d4af37;
+}
 
+body.dark-mode .footer {
+  border-color: #444;
+}
+
+/* ========== Медиа-запросы ========== */
 @media (max-width: 768px) {
-  .logo {
-    font-size: 24px;
+  .hero h1 {
+    font-size: 2rem;
+    padding: 0 20px;
   }
-}
 
-@media (max-width: 480px) {
-  .logo {
-    font-size: 20px;
+  .hero p,
+  .service-page p,
+  .contact-section p {
+    font-size: 15px;
+  }
+
+  .services-grid,
+  .about-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card,
+  .about-item {
+    width: 90%;
+  }
+
+  .service-page,
+  .contact-section {
+    padding: 40px 15px;
   }
 }
