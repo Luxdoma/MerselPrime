@@ -1,19 +1,55 @@
 /* ========== Общие стили ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-{ margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  background: #ffffff;
+  color: #333;
+  transition: background 0.4s, color 0.4s;
+  scroll-behavior: smooth;
+}
 
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-body { font-family: 'Poppins', 'Roboto', sans-serif; background: #ffffff; color: #333; transition: background 0.4s, color 0.4s; scroll-behavior: smooth; }
+/* ========== Переключатель темы ========== */
+.theme-toggle, .moon-icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1000;
+}
 
-.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+.theme-toggle i {
+  transition: color 0.4s, transform 0.4s;
+}
 
-/* ========== Переключатель темы ========== */ .theme-toggle, .moon-icon { position: fixed; top: 20px; right: 20px; background: none; border: none; cursor: pointer; font-size: 24px; z-index: 1000; }
+/* ========== Хедер и навигация ========== */
+.header {
+  background: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
 
-.theme-toggle i { transition: color 0.4s, transform 0.4s; }
-
-/* ========== Хедер и навигация ========== */ .header { background: #fff; padding: 20px 0; text-align: center; position: relative; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); }
-
-.logo { font-size: 28px; color: #d4af37; font-weight: 800; letter-spacing: 1px; }
+.logo {
+  font-size: 28px;
+  color: #d4af37;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
 
 .logo.shine {
   position: relative;
@@ -27,54 +63,180 @@ body { font-family: 'Poppins', 'Roboto', sans-serif; background: #ffffff; color:
   left: -75%;
   width: 50%;
   height: 100%;
-  background: linear-gradient(
-    120deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.4) 50%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 100%);
   transform: skewX(-20deg);
   animation: shine 3s infinite;
 }
 
 @keyframes shine {
-  0% {
-    left: -75%;
-  }
-  100% {
-    left: 125%;
-  }
+  0% { left: -75%; }
+  100% { left: 125%; }
 }
 
-.nav { margin-top: 15px; }
+.nav {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
 
-.nav a { margin: 0 15px; text-decoration: none; font-weight: 600; color: #333; transition: color 0.3s; }
+.nav a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #333;
+  transition: color 0.3s;
+}
 
-.nav a.btn { background: #d4af37; color: white; padding: 10px 20px; border-radius: 30px; }
+.nav a.btn {
+  background: #d4af37;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
 
-.nav a:hover { color: #88b04b; }
+.nav a:hover {
+  color: #88b04b;
+}
 
-/* ========== Footer (на миллион долларов) ========== */ .footer { padding: 60px 20px; background: linear-gradient(to right, #1e1e1e, #2c2c2c); color: #f1f1f1; display: flex; flex-direction: column; align-items: center; text-align: center; border-top: 4px solid #d4af37; margin-top: 60px; }
+/* ========== Hero Section ========== */
+.hero {
+  background: url('images/hero.jpg') center center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
 
-.footer .logo { font-size: 26px; color: #d4af37; margin-bottom: 20px; }
+.hero-overlay {
+  background: rgba(0,0,0,0.5);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-.footer p { max-width: 600px; margin-bottom: 30px; font-size: 16px; color: #ccc; }
+.hero-container h1 {
+  font-size: 48px;
+  color: #fff;
+}
 
-.footer nav { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-bottom: 30px; }
+.hero-container p {
+  font-size: 20px;
+  color: #ddd;
+  margin-top: 10px;
+}
 
-.footer a { color: #d4af37; text-decoration: none; font-weight: 600; transition: color 0.3s; }
+.primary-btn {
+  background: #d4af37;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
 
-.footer a:hover { color: #ffffff; }
+.primary-btn:hover {
+  background: #b38e2d;
+  transform: translateY(-3px);
+}
 
-.footer .social-icons { display: flex; gap: 15px; margin-top: 20px; }
+/* ========== Services Section ========== */
+.services {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
 
-.footer .social-icons a { color: #f1f1f1; font-size: 20px; transition: transform 0.3s, color 0.3s; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
 
-.footer .social-icons a:hover { transform: translateY(-3px); color: #d4af37; }
+.service-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+}
 
-.footer .copyright { font-size: 14px; color: #777; margin-top: 20px; border-top: 1px solid #444; padding-top: 20px; width: 100%; }
+.service-icon {
+  font-size: 32px;
+  color: #d4af37;
+  margin-bottom: 15px;
+}
 
-/* Остальные стили (без изменений) / / Добавьте здесь оставшуюся часть вашего CSS без изменений. */
+.small-btn {
+  font-size: 14px;
+  padding: 8px 16px;
+}
+
+/* ========== About Section ========== */
+.about {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.about-item h4 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+/* ========== CTA Section ========== */
+.cta {
+  padding: 60px 20px;
+  background: #1a1a1a;
+  color: #fff;
+  text-align: center;
+}
+
+/* ========== Footer ========== */
+.footer {
+  padding: 60px 20px;
+  background: linear-gradient(to right, #1e1e1e, #2c2c2c);
+  color: #f1f1f1;
+  text-align: center;
+  border-top: 4px solid #d4af37;
+  margin-top: 60px;
+}
+
+.footer a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #ffffff;
+}
+
+.footer-socials a {
+  color: #f1f1f1;
+  font-size: 20px;
+  margin: 0 10px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-3px);
+  color: #d4af37;
+}
 
 /* ========== Booking Form ========== */
 .booking-form {
@@ -86,12 +248,6 @@ body { font-family: 'Poppins', 'Roboto', sans-serif; background: #ffffff; color:
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.booking-form h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #333;
-}
-
 .booking-form form {
   display: flex;
   flex-direction: column;
@@ -101,13 +257,8 @@ body { font-family: 'Poppins', 'Roboto', sans-serif; background: #ffffff; color:
   width: 100%;
 }
 
-.booking-form label {
-  text-align: left;
-  font-weight: 600;
-  color: #555;
-}
-
-.booking-form input, .booking-form select {
+.booking-form input,
+.booking-form select {
   padding: 12px;
   border: 2px solid #d4af37;
   border-radius: 10px;
@@ -116,25 +267,12 @@ body { font-family: 'Poppins', 'Roboto', sans-serif; background: #ffffff; color:
   transition: border-color 0.3s;
 }
 
-.booking-form input:focus, .booking-form select:focus {
+.booking-form input:focus,
+.booking-form select:focus {
   border-color: #88b04b;
 }
 
-.booking-form button.primary-btn {
-  background-color: #1a1a1a;
-  font-weight: 600;
-  font-size: 1.2rem;
-  padding: 16px 32px;
-  border-radius: 50px;
-  align-self: center;
-}
-
-.booking-form button.primary-btn:hover {
-  background-color: #333;
-  transform: translateY(-3px);
-}
-
-/* ========== Categories Section ========== */
+/* ========== Business Categories ========== */
 .business-categories {
   padding: 60px 20px;
   text-align: center;
@@ -158,18 +296,6 @@ body { font-family: 'Poppins', 'Roboto', sans-serif; background: #ffffff; color:
 .category-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.category-card h3 {
-  font-size: 22px;
-  margin-bottom: 15px;
-  color: #333;
-}
-
-.category-card p {
-  font-size: 16px;
-  margin-bottom: 20px;
-  color: #555;
 }
 
 .secondary-btn {
@@ -234,9 +360,7 @@ body.dark-mode .footer a {
   color: #ccc;
 }
 
-body.dark-mode .hero,
-body.dark-mode .hero-light,
-body.dark-mode .hero-visa {
+body.dark-mode .hero {
   background: linear-gradient(135deg, #1e1e1e, #2c2c2c);
   color: #eee;
 }
@@ -260,31 +384,50 @@ body.dark-mode .footer {
 }
 
 /* ========== Медиа-запросы ========== */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
-    padding: 0 20px;
+@media (max-width: 1024px) {
+  .hero-container h1 {
+    font-size: 36px;
   }
 
-  .hero p,
-  .service-page p,
-  .contact-section p {
-    font-size: 15px;
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container h1 {
+    font-size: 28px;
+  }
+
+  .hero-container p {
+    font-size: 16px;
   }
 
   .services-grid,
-  .about-grid {
+  .about-grid,
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-nav,
+  .nav {
     flex-direction: column;
     align-items: center;
   }
+}
 
-  .service-card,
-  .about-item {
-    width: 90%;
+@media (max-width: 480px) {
+  .primary-btn, .secondary-btn {
+    padding: 10px 20px;
+    font-size: 14px;
   }
 
-  .service-page,
-  .contact-section {
-    padding: 40px 15px;
+  .hero-container h1 {
+    font-size: 24px;
+  }
+
+  .booking-form {
+    padding: 40px 10px;
   }
 }
