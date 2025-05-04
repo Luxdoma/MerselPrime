@@ -965,3 +965,24 @@ footer .copyright {
     text-align: center;
     opacity: 0.7;
 }
+
+@media (max-width: 480px) {
+  .thanks-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .thanks-container h1 {
+    font-size: 24px;
+  }
+
+  .thanks-container p {
+    font-size: 16px;
+  }
+
+  .thanks-container a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
