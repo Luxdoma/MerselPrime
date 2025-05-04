@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Связаться | Mersel Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-light: #fdfefc;
+      --primary-light: #e0f2ea;
+      --accent-light: #0e3b2f;
+
+      --bg-dark: #0c0c0c;
+      --primary-dark: #1b1b1b;
+      --accent-dark: #d4af37;
+
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-light);
+      color: #111;
+      line-height: 1.6;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      transition: var(--transition);
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: #eee;
+    }
+
+    .container {
+      max-width: 480px;
+      width: 100%;
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      transition: var(--transition);
+    }
+
+    body.dark .container {
+      background: var(--primary-dark);
+      box-shadow: 0 20px 60px rgba(212, 175, 55, 0.1);
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: var(--accent-light);
+      transition: var(--transition);
+    }
+
+    body.dark h1 {
+      color: var(--accent-dark);
+    }
+
+    p {
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    body.dark p {
+      color: #bbb;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    input,
+    textarea {
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 16px;
+      background: #fafafa;
+      transition: var(--transition);
+    }
+
+    body.dark input,
+    body.dark textarea {
+      background: #111;
+      border: 1px solid #555;
+      color: #eee;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: var(--accent-light);
+      outline: none;
+      background: #fff;
+    }
+
+    body.dark input:focus,
+    body.dark textarea:focus {
+      border-color: var(--accent-dark);
+      background: #1c1c1c;
+    }
+
+    button {
+      padding: 14px;
+      background-color: var(--accent-light);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    body.dark button {
+      background-color: var(--accent-dark);
+      color: #000;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 28px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body class="light">
+  <div class="container">
+    <h1>Связаться с нами</h1>
+    <p>Если у вас есть вопросы, предложения или вы хотите сотрудничать — напишите нам.</p>
+    <form action="https://formspree.io/f/merseltest" method="POST">
+      <label for="name">Имя</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Сообщение</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Отправить</button>
+    </form>
+  </div>
+
+  <!-- Скрипт для переключения тем -->
+  <script>
+    // Автопереключение по системной теме (можно убрать)
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.classList.add('dark');
+    }
+  </script>
+</body>
+</html>
