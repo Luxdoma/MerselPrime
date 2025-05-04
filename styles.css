@@ -919,3 +919,19 @@ img {
   height: auto;
   object-fit: cover; /* Это заставит изображение покрывать весь экран */
 }
+
+.hero-main,
+.hero-light {
+    padding-top: 60px !important;
+    padding-bottom: 40px !important;
+    margin-bottom: 0 !important;
+}
+
+.hero h1,
+.hero p {
+    margin-bottom: 10px !important;
+}
+
+.hero + * {
+    margin-top: 0 !important;
+}
